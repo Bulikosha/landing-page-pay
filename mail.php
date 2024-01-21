@@ -16,20 +16,18 @@
         $mail->isSMTP();
         $mail->Host = 'mail.akkadapay.kz';
         $mail->SMTPAuth = true;
-        $mail->Username = 'info@akkadapay.kz';
+        $mail->Username = 'request@akkadapay.kz';
         $mail->Password = 'Qr2023@eQ';
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
 
-        $mail->setFrom('info@akkadapay.kz');
-        $mail->addAddress('bula86kz@gmail.com');
+        $mail->setFrom('request@akkadapay.kz');
+        $mail->addAddress('info@akkadapay.kz');
         $mail->isHTML(true);
 
         $mail->Subject = "AKKADAPAY: Заявка с сайта";
-        $mail->Body = 'Пользователь: ' .$name . 'оставил заявку. Контакты: ' .$phone;
+        $mail->Body = 'Пользователь: ' .$name . ' оставил заявку. Контакты: ' .$phone;
         $mail->AltBody = 'Пользователь: ' .$name .' оставил заявку. Контакты: ' .$phone;
-  
-        $mail->send();
 
         if(!$mail->send()) {
             echo 'Error';
