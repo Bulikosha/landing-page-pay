@@ -14,7 +14,7 @@
     try{
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;
         $mail->isSMTP();
-        $mail->Host = 'mail.akkadapay.kz';
+        $mail->Host = 'akkadapay.kz';
         $mail->SMTPAuth = true;
         $mail->Username = 'request@akkadapay.kz';
         $mail->Password = 'Qr2023@eQ';
